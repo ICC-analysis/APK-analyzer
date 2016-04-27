@@ -29,3 +29,5 @@ jsonfile.writeFile(output, mymsg,  {spaces: 4}, function (err) {
         console.error(err);
     }
 })
+
+//console.log(util.inspect(mymsg, showHidden=false, depth=null, colorize=true));
