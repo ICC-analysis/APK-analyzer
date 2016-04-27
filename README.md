@@ -9,12 +9,19 @@ You will need to install:
   for Android.
 
 ~~~~shell
-$ mkdir ic3
-$ wget https://github.com/siis/ic3/releases/download/v0.2.0/ic3-0.2.0.jar
-$ git clone https://github.com/siis/ic3.git
+$ git clone https://git.list.lu/visual/APK-analyzer.git
+$ cd APK-analyzer/
 
+$ mkdir ic3
+$ wget https://github.com/siis/ic3/releases/download/v0.2.0/ic3-0.2.0.jar -O ic3/ic3-0.2.0.jar
+
+$ mkdir dare
 $ wget https://github.com/dare-android/platform_dalvik/releases/download/dare-1.1.0/dare-1.1.0-linux.tgz
-$ tar -xzvf dare-1.1.0-linux.tgz
+$ tar -xzvf dare-1.1.0-linux.tgz -C dare --strip-components=1
+$ rm dare-1.1.0-linux.tgz
+$ cd dare
+$ sudo apt-get install ia32-libs
+$ ./dex-preopt --bootstrap
 ~~~~
 
 ## Usage
