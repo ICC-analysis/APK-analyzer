@@ -13,7 +13,9 @@ $ git clone https://git.list.lu/visual/APK-analyzer.git
 $ cd APK-analyzer/
 
 $ mkdir ic3
-$ wget https://github.com/siis/ic3/releases/download/v0.2.0/ic3-0.2.0.jar -O ic3/ic3-0.2.0.jar
+$ wget https://github.com/siis/ic3/releases/download/v0.2.0/ic3-0.2.0-bin.tgz
+$ tar -xzvf ic3-0.2.0-bin.tgz -C ic3 --strip-components=1
+$ rm ic3-0.2.0-bin.tgz
 
 $ mkdir dare
 $ wget https://github.com/dare-android/platform_dalvik/releases/download/dare-1.1.0/dare-1.1.0-linux.tgz
@@ -27,7 +29,7 @@ $ ./dex-preopt --bootstrap
 ## Usage
 
 ~~~~shell
-$ parallel -j 5 ./analyze_apk.sh ::: ~/sample_apk/*.apk
+$ parallel -j 5 ./analyze_apk.sh ::: ~/APK-analyzer/sample_APK/*.apk
 ~~~~
 
 ## License information
