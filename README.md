@@ -29,7 +29,7 @@ $ ./dex-preopt --bootstrap
 You will also have to install Node.js and ProtoBuf.js:
 
 ~~~~shell
-$ npm install protobufjs
+$ npm install protobufjs jsonfile
 ~~~~
 
 ## Usage
