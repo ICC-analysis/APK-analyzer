@@ -1,7 +1,8 @@
 var ProtoBuf = require("protobufjs"),
     fs = require("fs"),
     util = require("util"),
-    path = require("path");
+    path = require("path"),
+    jsonfile = require('jsonfile');
 
 
 var output_folder = './json_output'
@@ -20,6 +21,11 @@ if (!fs.existsSync(output_folder)){
 }
 var output = output_folder + '/' + path.basename(process.argv[2], '.dat') + '.json'
 
-fs.writeFileSync(output, util.inspect(mymsg, true, null, true, false) , 'utf-8');
 
-//console.log(util.inspect(mymsg, showHidden=false, depth=2, colorize=true));
+//fs.writeFileSync(output, util.inspect(mymsg, showHidden=false, depth=null, colorize=true) , 'utf-8');
+
+jsonfile.writeFile(output, mymsg,  {spaces: 4}, function (err) {
+    if (err) {
+        console.error(err);
+    }
+})
