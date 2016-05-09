@@ -7,7 +7,7 @@ import os
 import sys
 import json
 
-import protobuf_json
+import protobuf-json
 from primo.linking import ic3_data_pb2
 
 exit_point_count = 0
