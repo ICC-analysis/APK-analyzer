@@ -5,11 +5,10 @@ from google.protobuf import text_format
 import logging
 import os
 import sys
-
-import protobuf_json
 import json
 
-from proto_file import ic3_data_pb2
+import protobuf_json
+from primo.linking import ic3_data_pb2
 
 exit_point_count = 0
 intent_count = 0
