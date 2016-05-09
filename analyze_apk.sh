@@ -32,14 +32,15 @@ java -jar $IC3_DIRECTORY/ic3-0.2.0-full.jar \
     -apkormanifest $APK_FILE \
     -input $DARE_OUTPUT_DIRECTORY/retargeted/$APK_NAME \
     -cp $ANDROID_JAR \
-    -binary \
     -protobuf $IC3_OUTPUT_DIRECTORY/$APK_NAME
+    #-binary
 rm -Rf $DARE_OUTPUT_DIRECTORY
 
 
 # Load the binary proto file
-node builder.js  $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.dat $IC3_PROTO
-rm  -Rf $IC3_OUTPUT_DIRECTORY/$APK_NAME
+#node proto2json.js  $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.dat $IC3_PROTO
+#rm  -Rf $IC3_OUTPUT_DIRECTORY/$APK_NAME
+python proto2json.py $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.txt
 
 
 

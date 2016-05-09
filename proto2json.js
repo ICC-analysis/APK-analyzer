@@ -7,6 +7,10 @@ var ProtoBuf = require("protobufjs"),
 var output_folder = './json_output'
 
 
+// var parser = new ProtoBuf.DotProto.Parser(fs.readFileSync(process.argv[3]));
+// var ast = parser.parse();
+// console.log(util.inspect(ast, false, null, true));
+
 var builder = ProtoBuf.newBuilder({convertFieldsToCamelCase: true});
 ProtoBuf.loadProtoFile(path.resolve(process.argv[3]), builder);
 var message = builder.build("edu.psu.cse.siis.ic3.Application");
