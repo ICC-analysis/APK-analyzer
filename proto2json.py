@@ -7,7 +7,7 @@ import os
 import sys
 import json
 
-import protobuf-json
+from protobuf_json import protobuf_json
 from primo.linking import ic3_data_pb2
 
 exit_point_count = 0
@@ -86,7 +86,7 @@ def ProcessFile(file_path, apps, components, intents, intent_filters, validate):
 
 
 
-    output_folder = './json_output'
+    output_folder = '.'
     with open(output_folder + '/test.json', 'w') as outfile:
         json.dump(json_obj, outfile, indent=4)
     #print json.dumps(json_obj, sort_keys=True, indent=4,

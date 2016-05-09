@@ -24,7 +24,7 @@ touch __init__.py
 sudo python setup.py build
 cd ..
 
-touch protobuf-json/__init__.py
+touch protobuf_json/__init__.py
 
 # Python dependencies for proto2json.py
 sudo pip install -r requirements.txt
