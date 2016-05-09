@@ -3,4 +3,4 @@
 	url = https://github.com/siis/primo.git
 [submodule "protobuf_json"]
 	path = protobuf_json
-	url = https://github.com/dpp-name/protobuf-json.git
+	url = https://github.com/cedricbonhomme/protobuf-json.git
