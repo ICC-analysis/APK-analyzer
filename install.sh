@@ -16,14 +16,17 @@ sudo apt-get install ia32-libs
 ./dex-preopt --bootstrap
 cd ..
 
-# Download and install Primo
+# Download and install PRIMO
+git clone https://github.com/cedricbonhomme/primo.git
+cd primo/
+sudo python setup.py build
+sudo python setup.py install
+cd ..
+sudo rm -Rf primo/
+
+# Download Protobuf-JSON
 git submodule init
 git submodule update
-cd primo
-touch __init__.py
-sudo python setup.py build
-cd ..
-
 touch protobuf_json/__init__.py
 
 # Python dependencies for proto2json.py

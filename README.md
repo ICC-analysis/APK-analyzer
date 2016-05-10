@@ -2,22 +2,14 @@
 
 ## Requirements
 
-Use the script install.sh
+The script install.sh will install all the requirements:
 
-This script will install:
 - [dare](http://siis.cse.psu.edu/dare): the Dare tool retargets Android
   applications in .dex or .apk format to traditional .class files;
 - [IC3](http://siis.cse.psu.edu/ic3/): inter-Component Communication Analysis
   for Android;
 - [Primo](http://siis.cse.psu.edu/primo/): a tool for static Intent resolution
   and probabilistic value inference
-
-
-You will also have to install Node.js and ProtoBuf.js:
-
-~~~~shell
-$ npm install protobufjs jsonfile
-~~~~
 
 ## Usage
 
