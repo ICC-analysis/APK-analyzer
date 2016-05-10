@@ -1,3 +1,6 @@
 [submodule "protobuf_json"]
 	path = protobuf_json
 	url = https://github.com/cedricbonhomme/protobuf-json.git
+[submodule "primo"]
+	path = primo
+	url = https://github.com/cedricbonhomme/primo.git
