@@ -1,11 +1,11 @@
 
 """Module for fetching data from protobufs."""
 
-from google.protobuf import text_format
+import os
 import sys
 import json
+from google.protobuf import text_format
 from protobuf_json import protobuf_json
-
 from primo.linking import ic3_data_pb2
 
 
@@ -24,6 +24,9 @@ if __name__ == "__main__":
 
     json_obj = protobuf_json.pb2json(application)
 
-    output_folder = '.'
-    with open(output_folder + '/test.json', 'w') as outfile:
+    output_folder = 'json_output'
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    output_filename = os.path.splitext(os.path.basename(file_path))[0] + '.json'
+    with open(os.path.join(output_folder, output_filename), 'w') as outfile:
         json.dump(json_obj, outfile, indent=4)

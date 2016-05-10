@@ -39,10 +39,5 @@ rm -Rf $DARE_OUTPUT_DIRECTORY
 
 # Load the binary proto file
 #node proto2json.js  $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.dat $IC3_PROTO
-#rm  -Rf $IC3_OUTPUT_DIRECTORY/$APK_NAME
 python proto2json.py $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.txt
-
-
-
-#primo.py --protodir ic3/ --stats stats.csv --dumpintentlinks links.blp
-#make_plots_and_stats.py --input links.blp --out stats/
+rm -Rf $IC3_OUTPUT_DIRECTORY/$APK_NAME
