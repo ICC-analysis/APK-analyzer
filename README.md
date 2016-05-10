@@ -9,7 +9,8 @@ This script will install:
   applications in .dex or .apk format to traditional .class files;
 - [IC3](http://siis.cse.psu.edu/ic3/): inter-Component Communication Analysis
   for Android;
-- [IC3](http://siis.cse.psu.edu/primo/).
+- [Primo](http://siis.cse.psu.edu/primo/): a tool for static Intent resolution
+  and probabilistic value inference
 
 
 You will also have to install Node.js and ProtoBuf.js:
