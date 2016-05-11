@@ -4,12 +4,12 @@
 APK_FILE=`realpath $1`
 APK_NAME=`basename ${APK_FILE%.apk}`
 
-DARE_OUTPUT_DIRECTORY=${APK_FILE%.apk}
+TEMP_DIRECTORY=`realpath "./tmp"`
+DARE_OUTPUT_DIRECTORY=$TEMP_DIRECTORY"/dare/"$APK_NAME
+IC3_OUTPUT_DIRECTORY=$TEMP_DIRECTORY"/ic3"
+PROTO2JSON_OUTPUT_DIRECTORY="./result"
 
-IC3_OUTPUT_DIRECTORY=`realpath "./binary_proto"`
-IC3_PROTO=`realpath "proto_file/ic3_data.proto"`
-
-# Paths to dare and ic3
+# Paths to dare and ic3 binaries
 DARE_DIRECTORY="./dare"
 IC3_DIRECTORY="./ic3"
 
@@ -34,10 +34,11 @@ java -jar $IC3_DIRECTORY/ic3-0.2.0-full.jar \
     -cp $ANDROID_JAR \
     -protobuf $IC3_OUTPUT_DIRECTORY/$APK_NAME
     #-binary
-rm -Rf $DARE_OUTPUT_DIRECTORY
+rm -Rf $DARE_OUTPUT_DIRECTORY sootOutput
 
 
-# Load the binary proto file
+# Convert the proto file to JSON
+#IC3_PROTO=`realpath "proto_file/ic3_data.proto"`
 #node proto2json.js  $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.dat $IC3_PROTO
-python proto2json.py $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.txt
+python proto2json.py $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.txt $PROTO2JSON_OUTPUT_DIRECTORY
 rm -Rf $IC3_OUTPUT_DIRECTORY/$APK_NAME

@@ -3,7 +3,5 @@ dare
 ic3
 
 # Outputs
-binary_proto
-json_output
-
-sample_APK
+tmp
+result
