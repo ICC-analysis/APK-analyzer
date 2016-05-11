@@ -2,21 +2,21 @@
 
 ## Requirements
 
-The script install.sh will install all the requirements:
+The script ```install.sh``` will install all the requirements:
 
-- [dare](http://siis.cse.psu.edu/dare): the Dare tool retargets Android
+- [Dare](http://siis.cse.psu.edu/dare): the Dare tool retargets Android
   applications in .dex or .apk format to traditional .class files;
 - [IC3](http://siis.cse.psu.edu/ic3/): inter-Component Communication Analysis
   for Android;
-- [Primo](http://siis.cse.psu.edu/primo/): a tool for static Intent resolution
-  and probabilistic value inference
+- [PRIMO](http://siis.cse.psu.edu/primo/): a tool for static Intent resolution
+  and probabilistic value inference.
 
 ## Usage
 
 ~~~~shell
-$ parallel -j 5 ./analyze_apk.sh ::: ~/APK-analyzer/sample_APK/*.apk
+$ parallel -j 5 ./analyze_apk.sh ::: ~/sample_APK/*.apk
 
-$ ls -l json_output/
+$ ls -l result/
 total 548
 -rw-r--r-- 1 cedric cedric  9375 Apr 27 08:28 a2dp.Vol_107.json
 -rw-r--r-- 1 cedric cedric  3983 Apr 27 08:29 air.br.com.bitlabs.FLVPlayer_1007003.json
