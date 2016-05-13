@@ -1,5 +1,13 @@
 #! /bin/sh
 
+# This script extracts information from an Android application (APK file).
+# The output is a JSON file with the components, intents, intents filters
+# and permissions of the application.
+#
+# You can use it on a set of applications:
+#  $ parallel -j 5 ./analyze_apk.sh ::: ~/sample-APK/*.apk
+#
+# Author: Cédric Bonhomme
 
 APK_FILE=`realpath $1`
 APK_NAME=`basename ${APK_FILE%.apk}`
