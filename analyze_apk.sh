@@ -40,5 +40,6 @@ rm -Rf $DARE_OUTPUT_DIRECTORY sootOutput
 # Convert the proto file to JSON
 #IC3_PROTO=`realpath "proto_file/ic3_data.proto"`
 #node proto2json.js  $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.dat $IC3_PROTO
-python proto2json.py $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.txt $PROTO2JSON_OUTPUT_DIRECTORY
+python proto2json.py $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.txt \
+                    $PROTO2JSON_OUTPUT_DIRECTORY
 rm -Rf $IC3_OUTPUT_DIRECTORY/$APK_NAME
