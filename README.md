@@ -1,5 +1,8 @@
 # APK analyzer
 
+Batch analysis of APK files with Dare, IC3 and PRIMO.
+
+
 ## Requirements
 
 The script ```install.sh``` will install all the requirements:
@@ -10,6 +13,7 @@ The script ```install.sh``` will install all the requirements:
   for Android;
 - [PRIMO](http://siis.cse.psu.edu/primo/): a tool for static Intent resolution
   and probabilistic value inference.
+
 
 ## Usage
 
@@ -35,6 +39,7 @@ total 548
 -rw-r--r-- 1 cedric cedric  9607 Apr 27 08:30 com.adobe.reader_73784.json
 -rw-r--r-- 1 cedric cedric 22626 Apr 27 08:30 com.agilesoftresource_126.json
 ~~~~
+
 
 ## License information
 
