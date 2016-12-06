@@ -12,7 +12,7 @@ wget https://github.com/dare-android/platform_dalvik/releases/download/dare-1.1.
 tar -xzvf dare-1.1.0-linux.tgz -C dare --strip-components=1
 rm dare-1.1.0-linux.tgz
 cd dare
-sudo apt-get install ia32-libs
+sudo apt-get install libc6-i386 lib32stdc++6
 ./dex-preopt --bootstrap
 cd ..
 
