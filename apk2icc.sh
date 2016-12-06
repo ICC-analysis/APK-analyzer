@@ -1,12 +1,10 @@
 #! /bin/sh
 
 # This script extracts information from an Android application (APK file).
-# The output is a JSON file with the components, intents, intents filters
-# and permissions of the application.
+# The output is a binary file with Inter-Component Communication
+# (components, intents, intents filters, permissions, etc.).
 #
 #  $ ./apk2icc.sh ~/sample-APK/application.apk
-#
-# Author: Cédric Bonhomme
 
 APK_FILE=`realpath $1`
 APK_NAME=`basename ${APK_FILE%.apk}`
