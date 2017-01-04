@@ -11,7 +11,7 @@ APK_NAME=`basename ${APK_FILE%.apk}`
 
 TEMP_DIRECTORY=`realpath "./tmp"`
 DARE_OUTPUT_DIRECTORY=$TEMP_DIRECTORY"/dare/"$APK_NAME
-IC3_OUTPUT_DIRECTORY=$TEMP_DIRECTORY"/ic3"
+IC3_OUTPUT_DIRECTORY="./result"
 
 # Paths to dare and ic3 binaries
 DARE_DIRECTORY="./dare"
@@ -38,4 +38,4 @@ java -jar $IC3_DIRECTORY/ic3-0.2.0-full.jar \
     -cp $ANDROID_JAR \
     -protobuf $IC3_OUTPUT_DIRECTORY/$APK_NAME \
     -binary
-rm -Rf $DARE_OUTPUT_DIRECTORY sootOutput
+rm -Rf $DARE_OUTPUT_DIRECTORY sootOutput $TEMP_DIRECTORY
