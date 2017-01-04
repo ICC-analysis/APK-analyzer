@@ -41,7 +41,6 @@ java -jar $IC3_DIRECTORY/ic3-0.2.0-full.jar \
     -input $DARE_OUTPUT_DIRECTORY/retargeted/$APK_NAME \
     -cp $ANDROID_JAR \
     -protobuf $IC3_OUTPUT_DIRECTORY/$APK_NAME
-    #-binary
 rm -Rf $DARE_OUTPUT_DIRECTORY sootOutput
 
 
