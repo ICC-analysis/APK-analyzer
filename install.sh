@@ -17,17 +17,17 @@ sudo apt-get install libc6-i386 lib32stdc++6
 cd ..
 
 # Download and install PRIMO
-git clone https://github.com/cedricbonhomme/primo.git
-cd primo/
-sudo python setup.py build
-sudo python setup.py install
-cd ..
-sudo rm -Rf primo/
-
-# Download Protobuf-JSON
-git submodule init
-git submodule update
-touch protobuf_json/__init__.py
+# git clone https://github.com/cedricbonhomme/primo.git
+# cd primo/
+# sudo python setup.py build
+# sudo python setup.py install
+# cd ..
+# sudo rm -Rf primo/
+#
+# # Download Protobuf-JSON
+# git submodule init
+# git submodule update
+# touch protobuf_json/__init__.py
 
 # Python dependencies for proto2json.py
-sudo pip install -r requirements.txt
+#sudo pip install -r requirements.txt
