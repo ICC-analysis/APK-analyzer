@@ -29,9 +29,12 @@ mkdir -p $IC3_OUTPUT_DIRECTORY
 IC3_OUTPUT_DIRECTORY=`readlink -f $IC3_OUTPUT_DIRECTORY`
 
 # Generation of the retargeted APK
-$DARE_DIRECTORY/dare -d $DARE_OUTPUT_DIRECTORY $APK_FILE
+echo "Dalvik Retargeting..."
+$DARE_DIRECTORY/dare -d $DARE_OUTPUT_DIRECTORY $APK_FILE > /dev/null
+
 
 # Generation of the proto file
+echo "Inter-Component Communication Analysis..."
 if [ $IC3_BINARY_OUTPUT = true ] ; then
     # binary version
     java -jar $IC3_DIRECTORY/ic3-0.2.0-full.jar \
@@ -39,13 +42,13 @@ if [ $IC3_BINARY_OUTPUT = true ] ; then
         -input $DARE_OUTPUT_DIRECTORY/retargeted/$APK_NAME \
         -cp $ANDROID_JAR \
         -protobuf $IC3_OUTPUT_DIRECTORY \
-        -binary
+        -binary > /dev/null
 else
     # text version
     java -jar $IC3_DIRECTORY/ic3-0.2.0-full.jar \
         -apkormanifest $APK_FILE \
         -input $DARE_OUTPUT_DIRECTORY/retargeted/$APK_NAME \
         -cp $ANDROID_JAR \
-        -protobuf $IC3_OUTPUT_DIRECTORY
+        -protobuf $IC3_OUTPUT_DIRECTORY > /dev/null
 fi
 rm -Rf $DARE_OUTPUT_DIRECTORY sootOutput

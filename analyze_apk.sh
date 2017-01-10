@@ -30,6 +30,7 @@ PROTO2JSON_OUTPUT_DIRECTORY=$ROOT_OUTPUT
 # Convert the proto file to a more readable JSON file
 #IC3_PROTO=`realpath "proto_file/ic3_data.proto"`
 #node proto2json.js  $IC3_OUTPUT_DIRECTORY/`basename ${APK_FILE%.apk}`/*.dat $IC3_PROTO
+echo "Convert the result of PRIMO to a JSON file..."
 python proto2json.py $IC3_OUTPUT_DIRECTORY/*.txt \
                     $PROTO2JSON_OUTPUT_DIRECTORY
-rm -Rf $IC3_OUTPUT_DIRECTORY/
+#rm -Rf $IC3_OUTPUT_DIRECTORY/
