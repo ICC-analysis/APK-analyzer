@@ -18,6 +18,15 @@ The script ```install.sh``` will install all the requirements:
 ## Usage
 
 ~~~~shell
+$ ./analyze_apk.sh ~/sample_APK/a2dp.Vol_c41b098530d3221838480f2088650bf1.apk
+Dalvik Retargeting...
+Inter-Component Communication Analysis...
+Convert the result of PRIMO to a JSON file...
+~~~~
+
+Batch analysis with parallel:
+
+~~~~shell
 $ parallel -j 5 ./analyze_apk.sh ::: ~/sample_APK/*.apk
 
 $ ls -l result/
