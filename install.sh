@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+sudo apt-get install openjdk-8-jre openjdk-8-jdk
+
 # Download IC3 jar file with the android.jar file.
 mkdir ic3
 wget https://github.com/siis/ic3/releases/download/v0.2.0/ic3-0.2.0-bin.tgz
@@ -12,7 +14,7 @@ wget https://github.com/dare-android/platform_dalvik/releases/download/dare-1.1.
 tar -xzvf dare-1.1.0-linux.tgz -C dare --strip-components=1
 rm dare-1.1.0-linux.tgz
 cd dare
-sudo apt-get install libc6-i386 lib32stdc++6
+sudo apt-get install libc6-i386 lib32stdc++6 zlib1g:i386
 ./dex-preopt --bootstrap
 cd ..
 
